@@ -1,0 +1,25 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reģistrēšanās</title>
+	<link href="/static/chatroom_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	{% if error %}
+	<p style="color: red">{{ error }}</p>
+	{% endif %}
+	<h1>Reģistrācija</h1>
+	<form action="/register" method="post">
+		<label for="username">Lietotājvārds:</label>
+		<input type="text" id="username" name="username" required>
+		<br><br>
+		<label for="password">Parole:</label>
+		<input type="password" id="password" name="password" required>
+		<br><br>
+		<input type="submit" value="Register">
+	</form>
+	<br>
+	<p>Jums jau ir profils? <a href="/login">Ielogoties</a></p>
+</body>
+</html>

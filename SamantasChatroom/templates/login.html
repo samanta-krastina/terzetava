@@ -1,0 +1,25 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ielogošanās</title>
+	<link href="/static/chatroom_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	{% if error %}
+	<p style="color: red">{{ error }}</p>
+	{% endif %}
+	<h1>Ielogošanās</h1>
+	<form action="/login" method="post">
+		<label for="username">Lietotājvārds:</label>
+		<input type="text" id="username" name="username" required>
+		<br><br>
+		<label for="password">Parole:</label>
+		<input type="password" id="password" name="password" required>
+		<br><br>
+		<input type="submit" value="Login">
+	</form>
+	<br>
+	<p>Vai jums nav profils? <a href="/register">Reģistrēties</a></p>
+</body>
+</html>

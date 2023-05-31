@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tērzētava</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="/static/chatroom_style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="laukums">
+      <div class="nosaukums">
+        Tērzētava
+      </div>
+      <div class="logs">
+        Šeit būs čata ziņas
+      </div>
+      <div class="zina">
+        Vārds: <input id="vards" type="text"/>
+        &nbsp;&nbsp;&nbsp;Ziņa: <input id="zina" type="text"/>
+        &nbsp;&nbsp;&nbsp;<input id="poga" type="button" value="Nosūtīt" onclick="NOSUTIT_ZINU()" />
+      </div>
+    </div>
+    <script src="/static/chatroom.js"></script>
+  </body>
+</html>
